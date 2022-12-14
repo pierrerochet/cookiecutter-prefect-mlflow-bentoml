@@ -1,0 +1,7 @@
+hydra:
+  job:
+    chdir: False
+  mode: MULTIRUN
+  sweeper:
+    params:
+      ++training.C: 0.001,0.01,0.1,1,10,100

@@ -1,0 +1,24 @@
+defaults:
+  - hydra.yaml
+  - training: RegressionLogistic.yaml
+  - deployment: prod.yaml
+  - _self_
+
+TRACKING_SERVER_URI: "http://127.0.0.1:5000"
+
+path:
+  data:
+    dir: data
+    raw:
+      dir: raw
+      path: ${path.data.dir}/${path.data.raw.dir}
+    splitted:
+      dir: splitted
+      path: ${path.data.dir}/${path.data.splitted.dir}
+    processed:
+      dir: processed
+      path: ${path.data.dir}/${path.data.processed.dir}
+  model:
+    dir: model
+  reports:
+    dir: reports

@@ -1,0 +1,3 @@
+model_name: classifier
+stage: Production
+MODEL_URI: models:/${deployment.model_name}/${deployment.stage}
