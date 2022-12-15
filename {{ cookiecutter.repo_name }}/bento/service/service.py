@@ -3,7 +3,6 @@ from typing import Any, Dict, List
 import bentoml
 from bentoml.io import JSON, NumpyNdarray
 from numpy.typing import NDArray
-import bentoml
 
 
 runner = bentoml.sklearn.get("pmb-model:latest").to_runner()
