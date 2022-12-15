@@ -31,7 +31,7 @@ activate:
 
 ## Launch a mlflow server
 mlflow_server:
-	mkdir .mlflow
+	mkdir -p .mlflow
 	mlflow server --backend-store-uri sqlite:///.mlflow/mlflow.db --artifacts-destination ./.mlflow/mlartifacts
 
 ## Run experiment flow with prefect
